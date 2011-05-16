@@ -6,7 +6,7 @@ endif
 
 APPNAME = webmailapi
 PKGNAME = WebMailAPI
-DEPS = git-mixedpuppy:apibase
+DEPS = git-mixedpuppy:apibase,git-mixedpuppy:neuemail
 VIRTUALENV = virtualenv
 NOSE = $(BIN_DIR)/nosetests
 NOSETESTS_ARGS = -s
