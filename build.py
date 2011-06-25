@@ -41,6 +41,7 @@ import subprocess
 CURDIR = os.path.dirname(__file__)
 REPOS = {'github': ('git', 'https://github.com/mozilla/%s.git'),
          'git-mixedpuppy': ('git', 'https://github.com/mixedpuppy/%s.git'),
+         'hg-mixedpuppy': ('hg', 'https://bitbucket.org/mixedpuppy/%s'),
          'mozilla': ('hg', 'https://hg.mozilla.org/services/%s')}
 PYTHON = sys.executable
 
