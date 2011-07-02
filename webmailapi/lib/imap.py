@@ -67,11 +67,11 @@ class ImapStorage(object):
         return msg
 
     def _parse_address(self, addr):
-        addr = parseaddr(addr)
+        paddr = parseaddr(addr)
         return {
-            "personal": addr[0],
-            "mailbox": addr[1].split('@')[0],
-            "host": addr[1].split('@')[1]
+            "personal": paddr[0],
+            "mailbox": paddr[1] and paddr[1].split('@')[0] or None,
+            "host": paddr[1] and paddr[1].split('@')[1] or None
         }
     _newline = re.compile('\r\n?|\s+', re.U)
     def _parse_msg_headers(self, uid, msg):
